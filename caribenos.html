@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caribeños - KEKIRA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container-hero">
+      <div class="container hero">
+        <div class="customer-support">
+          <i class="fa-solid fa-headset"></i>
+          <div class="content-customer-support">
+            <span class="text">Soporte al cliente</span>
+            <span class="number">123-456-7890</span>
+          </div>
+        </div>
+
+        <div class="logo">
+          <a href="index.html"><img src="imagenes/logotipo.png" alt="KEKIRA"></a>
+        </div>
+
+        <div class="container-user">
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-basket-shopping"></i>
+          <div class="content-shopping-cart">
+            <span class="text">Carrito</span>
+            <span class="number" id="cart-count">(0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-navbar">
+      <nav class="navbar container">
+        <i class="fa-solid fa-bars"></i>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="donas.html">Donas</a></li>
+          <li><a href="tornillos.html">Tornillos</a></li>
+          <li><a href="caribenos.html" class="active-link">Caribeños</a></li>
+          <li><a href="queque.html">Queque</a></li>
+          <li><a href="mas.html">Más</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER CARIBEÑOS -->
+  <section class="banner-caribenos">
+    <div class="content-banner-caribenos">
+      <h2>🥮 Postres Caribeños 🥮</h2>
+      <p>Sabores únicos de la tradición tropical</p>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO CARIBEÑOS -->
+  <main class="main-content caribenos-page">
+    <h1 class="heading-1">Catálogo de Caribeños</h1>
+    <div class="container-products">
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/caribe.jpg" alt="Caribeño Clásico">
+        </div>
+        <div class="content-card-product">
+          <h3>Caribeño Clásico</h3>
+          <p class="price">S/12.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/caribeños.jpg" alt="Caribeño de Coco">
+        </div>
+        <div class="content-card-product">
+          <h3>Caribeño de Coco</h3>
+          <p class="price">S/14.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/bodo2.jpg" alt="Caribeño de Piña">
+        </div>
+        <div class="content-card-product">
+          <h3>Caribeño de Piña</h3>
+          <p class="price">S/15.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/bodoque3.jpg" alt="Caribeño Mixto">
+        </div>
+        <div class="content-card-product">
+          <h3>Caribeño Mixto</h3>
+          <p class="price">S/16.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container container-footer">
+      <p>© 2025 KEKIRA - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Script carrito -->
+  <script>
+    const cartCount = document.getElementById("cart-count");
+    const buyButtons = document.querySelectorAll(".btn-buy");
+    let count = 0;
+
+    buyButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        count++;
+        if(cartCount){
+          cartCount.textContent = `(${count})`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

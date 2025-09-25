@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queques - KEKIRA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container-hero">
+      <div class="container hero">
+        <div class="customer-support">
+          <i class="fa-solid fa-headset"></i>
+          <div class="content-customer-support">
+            <span class="text">Soporte al cliente</span>
+            <span class="number">123-456-7890</span>
+          </div>
+        </div>
+
+        <div class="logo">
+          <a href="index.html"><img src="imagenes/logotipo.png" alt="KEKIRA"></a>
+        </div>
+
+        <div class="container-user">
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-basket-shopping"></i>
+          <div class="content-shopping-cart">
+            <span class="text">Carrito</span>
+            <span class="number" id="cart-count">(0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-navbar">
+      <nav class="navbar container">
+        <i class="fa-solid fa-bars"></i>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="donas.html">Donas</a></li>
+          <li><a href="tornillos.html">Tornillos</a></li>
+          <li><a href="caribenos.html">Caribeños</a></li>
+          <li><a href="queque.html" class="active-link">Queque</a></li>
+          <li><a href="mas.html">Más</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER QUEQUE -->
+  <section class="banner-queque">
+    <div class="content-banner-queque">
+      <h2>🍰 Deliciosos Queques 🍰</h2>
+      <p>Sabores caseros y frescos todos los días</p>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO QUEQUE -->
+  <main class="main-content queque-page">
+    <h1 class="heading-1">Catálogo de Queques</h1>
+    <div class="container-products">
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/queque4.jpg" alt="Queque Vainilla">
+        </div>
+        <div class="content-card-product">
+          <h3>Queque de Vainilla</h3>
+          <p class="price">S/10.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/queque6.jpg" alt="Queque Chocolate">
+        </div>
+        <div class="content-card-product">
+          <h3>Queque de Chocolate</h3>
+          <p class="price">S/12.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/queque3.jpg" alt="Queque Marmoleado">
+        </div>
+        <div class="content-card-product">
+          <h3>Queque Marmoleado</h3>
+          <p class="price">S/14.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/queque5.JPG" alt="Queque Especial">
+        </div>
+        <div class="content-card-product">
+          <h3>Queque Especial</h3>
+          <p class="price">S/16.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container container-footer">
+      <p>© 2025 KEKIRA - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Script carrito -->
+  <script>
+    const cartCount = document.getElementById("cart-count");
+    const buyButtons = document.querySelectorAll(".btn-buy");
+    let count = 0;
+
+    buyButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        count++;
+        if(cartCount){
+          cartCount.textContent = `(${count})`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

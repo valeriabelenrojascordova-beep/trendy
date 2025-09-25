@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Más Productos - KEKIRA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container-hero">
+      <div class="container hero">
+        <div class="customer-support">
+          <i class="fa-solid fa-headset"></i>
+          <div class="content-customer-support">
+            <span class="text">Soporte al cliente</span>
+            <span class="number">123-456-7890</span>
+          </div>
+        </div>
+
+        <div class="logo">
+          <a href="index.html"><img src="imagenes/logotipo.png" alt="KEKIRA"></a>
+        </div>
+
+        <div class="container-user">
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-basket-shopping"></i>
+          <div class="content-shopping-cart">
+            <span class="text">Carrito</span>
+            <span class="number" id="cart-count">(0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-navbar">
+      <nav class="navbar container">
+        <i class="fa-solid fa-bars"></i>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="donas.html">Donas</a></li>
+          <li><a href="tornillos.html">Tornillos</a></li>
+          <li><a href="caribenos.html">Caribeños</a></li>
+          <li><a href="queque.html">Queque</a></li>
+          <li><a href="mas.html" class="active-link">Más</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER MÁS -->
+  <section class="banner-mas">
+    <div class="content-banner-mas">
+      <h2>✨ Más Productos ✨</h2>
+      <p>Explora nuestras opciones adicionales y sorpresas dulces</p>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO MÁS -->
+  <main class="main-content mas-page">
+    <h1 class="heading-1">Nuestros Productos Extras</h1>
+    <div class="container-products">
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/gelatina.jpg" alt="Gelatina">
+        </div>
+        <div class="content-card-product">
+          <h3>Gelatina de Colores</h3>
+          <p class="price">S/6.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/flan.jpg" alt="Flan">
+        </div>
+        <div class="content-card-product">
+          <h3>Flan Casero</h3>
+          <p class="price">S/7.50</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/mazamorra.jpg" alt="Mazamorra">
+        </div>
+        <div class="content-card-product">
+          <h3>Mazamorra Morada</h3>
+          <p class="price">S/8.00</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+      <div class="card-product">
+        <div class="container-img">
+          <img src="imagenes/arroz-con-leche.jpg" alt="Arroz con leche">
+        </div>
+        <div class="content-card-product">
+          <h3>Arroz con Leche</h3>
+          <p class="price">S/8.50</p>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container container-footer">
+      <p>© 2025 KEKIRA - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Script carrito -->
+  <script>
+    const cartCount = document.getElementById("cart-count");
+    const buyButtons = document.querySelectorAll(".btn-buy");
+    let count = 0;
+
+    buyButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        count++;
+        if(cartCount){
+          cartCount.textContent = `(${count})`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
